@@ -14,7 +14,6 @@ app.use(express.static(path.join(__dirname,'frontend','build')));
     res.sendFile(path.join(__dirname,'frontend','build','index.html'));
 })
 
-
 const PORT = process.env.PORT || 3007
 app.listen(PORT, () =>{
     console.log('Connected');

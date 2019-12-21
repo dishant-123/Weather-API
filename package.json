@@ -2,9 +2,9 @@
   "name": "weather-app1",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "Server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node Server.js",
     "heroku-postbuild":"npm install && cd frontend && npm install && npm run build"
   },
   "author": "",
