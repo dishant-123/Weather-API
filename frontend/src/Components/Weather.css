@@ -1,8 +1,8 @@
 
 .mainClass   {
     
-    margin-left : 20%;
-    margin-right : 20%;
+    margin-left : 10%;
+    margin-right : 10%;
     /* border : 1px solid black */
   }
   .flexContainer{
@@ -19,4 +19,8 @@
     /* text-align: center; */
     /* line-height: 75px;
     font-size: 30px; */
+  }
+  .weatherIcon {
+    height:45px;
+     width:45px 
   }

@@ -39,12 +39,13 @@ import 'bootstrap/dist/css/bootstrap.css'
     //                             <p>{content.summary}</p>
     render() {
         return (
-            <div className = "mainClass" align = "center">
-                <h3>Please Enter Valid Adress for 7 days of weather Details..</h3>
+            <div className = "mainClass" align = "center" >
+                <h2>Welcome To Weather Tells Website</h2>
+                <h4>Please Enter Valid Adress for 7 days of weather Details..</h4>
                 <form onSubmit = {this.handleSubmit} >
-                    <h5>Enter Address</h5>
-                    <input type = "text" value = {this.state.address} onChange = {this.handleChange} name = "address" placeholder = "Enter valid Adress" required/><br/><br/>
-                    <button type = "submit">Search</button><br></br>
+                    {/* <h5>Enter Address</h5> */}
+                    <input class="form-control" id="inputdefault" type = "text" value = {this.state.address} onChange = {this.handleChange} name = "address" placeholder = "Enter valid Adress" required/><br></br>
+                    <button className="btn btn-dark" type = "submit">Search</button><br></br>
                 </form>
                 {this.state.content.length!==0 ? 
                 (
@@ -54,7 +55,7 @@ import 'bootstrap/dist/css/bootstrap.css'
                                     <h6>Longitude : </h6> <p>{this.state.longt}</p>
                                     <h6>Lattitude : </h6><p>{this.state.latt}</p>
                                     <table className="table table-striped ">
-                                    <thead>
+                                    <thead   className="thead-dark">
                                         <tr>
                                             <th scope = "col">Icon</th>
                                             <th scope="col">Day</th>
@@ -72,7 +73,7 @@ import 'bootstrap/dist/css/bootstrap.css'
                                             this.state.content.map((data, index) =>{
                                                 return [
                                                     <tr key ={index}>
-                                                        <td><img src = {`./weatherIconsImages/${data.icon}.png` } alt = "weather icon"/></td>
+                                                        <td><img className = "weatherIcon" src = {require(`./weatherIconsImages/${data.icon}.png`) } alt = "weather icon"/></td>
                                                         <td>{new Date(data.time*1000).toString().substr(0,4)}</td>
                                                         <td>{new Date(data.time*1000).toString().substr(4,12)}</td>
                                                         <td>{data.summary}</td>
